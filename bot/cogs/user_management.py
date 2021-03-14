@@ -13,8 +13,8 @@ class User_management(commands.Cog):
     @commands.command()
     async def kick(self, ctx, member: discord.Member, *, reason=None):
         await member.kick(reason=reason)
-        await ctx.send(f'Wyjebano {member.mention} za {reason}.')
-        await member.send(f'Zostałeś wyjebany z {ctx.guild} za {reason}.')
+        await ctx.send(f'Wyrzucono {member.mention} za {reason}.')
+        await member.send(f'Zostałeś wyrzucony z {ctx.guild} za {reason}.')
 
     @commands.command()
     async def ban(self, ctx, member: discord.Member, *, reason=None):
